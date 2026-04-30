@@ -17,15 +17,6 @@ resource "aws_flow_log" "example" {
   vpc_id               = aws_vpc.terraform_vpc.id
 }
 
-# Correcao segunda issue
-resource "aws_default_security_group" "default" {
-  vpc_id = aws_vpc.terraform_vpc.id
-  
-  tags = {
-    Name = "my-iac-sg"
-  }
-}
-
 ## Cria as 4 subnets em suas respectivas AZs ##
 
 ## Cria subnets na AZ 1A ##
